@@ -33,11 +33,18 @@ class StringCalculator {
 
       List<String> numList = splitNumbers(numbers, '$delimiter|\n');
 
-      return 0;
+      var result = sum(numList);
+
+      return result;
     }
   }
 
-  int convertToInt(String num) {
+  int convertToInt(String num){
+
+    if(num == "")
+    {
+      return 0;
+    }
     return int.parse(num);
   }
 
@@ -45,8 +52,16 @@ class StringCalculator {
     return numbers.split(RegExp(divider));
   }
 
-}
 
+  int sum(List<String> numbers) {
+    int total = 0;
+
+
+    return total;
+  }
+
+
+}
 
 
 
