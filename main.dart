@@ -6,10 +6,10 @@
 
 void main() {
 
-  var result  = StringCalculator().add("4");
+  var result  = StringCalculator().add("4,5\n60");
   print(result);
-  
- }
+
+}
 
 
 class StringCalculator {
@@ -56,12 +56,24 @@ class StringCalculator {
   int sum(List<String> numbers) {
     int total = 0;
 
+    List<String> negativeString =[];
+
+    for (String number in numbers) {
+      if (convertToInt(number) < 0) {
+        if (negativeString.isEmpty) {
+          negativeString.add(number);
+        }
+      }
+      if (convertToInt(number) < 1000) {
+        total += convertToInt(number);
+      }
+    }
+
+    if (negativeString.isNotEmpty) {
+      throw ArgumentError('Negatives not allowed: ${negativeString.toString()}');
+    }
+
 
     return total;
   }
-
-
 }
-
-
-
