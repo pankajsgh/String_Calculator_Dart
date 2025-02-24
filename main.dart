@@ -6,16 +6,31 @@
 
 void main() {
 
+  var result  = StringCalculator().add("4");
+  print(result);
+  
  }
 
 class StringCalculator {
 
   int add(String numbers) {
 
+    if (numbers.length < 2) {
+      if (numbers.isEmpty) {
+        return 0;
+      } else {
+        return 0;
+      }
+    } else {
+
+      return 0;
+    }
 
   }
 
+
 }
+
 
 
 
