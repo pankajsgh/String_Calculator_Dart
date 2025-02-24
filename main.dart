@@ -11,6 +11,7 @@ void main() {
   
  }
 
+
 class StringCalculator {
 
   int add(String numbers) {
@@ -30,6 +31,8 @@ class StringCalculator {
         numbers = numbers.substring(4);
       }
 
+      List<String> numList = splitNumbers(numbers, '$delimiter|\n');
+
       return 0;
     }
   }
@@ -38,8 +41,11 @@ class StringCalculator {
     return int.parse(num);
   }
 
-}
+  List<String> splitNumbers(String numbers, String divider) {
+    return numbers.split(RegExp(divider));
+  }
 
+}
 
 
 
