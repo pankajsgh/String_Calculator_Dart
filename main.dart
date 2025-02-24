@@ -19,7 +19,7 @@ class StringCalculator {
       if (numbers.isEmpty) {
         return 0;
       } else {
-        return 0;
+        return convertToInt(numbers);
       }
     } else {
 
@@ -28,8 +28,13 @@ class StringCalculator {
 
   }
 
+  int convertToInt(String num) {
+    return int.parse(num);
+  }
+
 
 }
+
 
 
 
