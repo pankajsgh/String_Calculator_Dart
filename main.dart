@@ -23,15 +23,20 @@ class StringCalculator {
       }
     } else {
 
+      String delimiter = ",";
+      final regex = RegExp(r'//(.*)\n(.*)');
+      if (regex.hasMatch(numbers)) {
+        delimiter = numbers[2];
+        numbers = numbers.substring(4);
+      }
+
       return 0;
     }
-
   }
 
   int convertToInt(String num) {
     return int.parse(num);
   }
-
 
 }
 
